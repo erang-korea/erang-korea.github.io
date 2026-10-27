@@ -1,1 +1,3 @@
-# erang-korea.github.io
+# 이랑산업 홈페이지
+
+정적 HTML 3페이지 (회사소개 · 제품소개 · 연락처)
