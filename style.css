@@ -99,3 +99,20 @@ footer .logo img{height:40px;margin-bottom:10px}
 .hero .yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .hero figcaption{margin-top:8px;font-size:13px;color:var(--mute)}
 @media (max-width:600px){.hero figure.hero-video{order:-1}}
+/* 연구성과 페이지 (2026-11-05) */
+.rs-main{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(280px,1fr);gap:24px;align-items:start}
+.rs-video{position:relative;aspect-ratio:16/9;border:3px solid var(--blue);border-radius:4px;overflow:hidden;background:var(--navy)}
+.rs-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.rs-side{gap:16px}
+.rs-side .btns{display:flex;flex-direction:column;gap:10px;margin-top:4px}
+.rs-side .btns .btn{text-align:center}
+.rs-side .btns small{font-size:13px;color:var(--mute);letter-spacing:0;font-weight:400}
+.rs-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin-bottom:24px}
+.rs-facts div{background:#fff;border:1px solid var(--line);border-top:6px solid var(--blue);border-radius:2px;padding:18px;text-align:center;box-shadow:0 2px 6px rgba(13,43,94,.06)}
+.rs-facts b{display:block;font-size:28px;font-weight:900;color:var(--blue)}.rs-facts span{font-size:14px;color:var(--sub)}
+.chap{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:8px}
+.chap button{width:100%;min-height:44px;display:flex;gap:14px;align-items:center;text-align:left;padding:10px 14px;background:#fff;border:1px solid var(--line);border-radius:4px;font:500 15px 'Noto Sans KR',sans-serif;color:var(--navy);cursor:pointer}
+.chap button:hover{border-color:var(--blue);background:var(--pale)}
+.chap b{min-width:44px;font-weight:700;color:var(--blue);font-variant-numeric:tabular-nums}
+.rs-note{margin:16px 0 0;font-size:14px;color:var(--mute)}
+@media (max-width:860px){.rs-main{grid-template-columns:minmax(0,1fr)}}
