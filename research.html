@@ -16,7 +16,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&amp;display=swap">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=20261105b">
 <link rel="icon" type="image/svg+xml" href="mark-erang.svg">
 </head>
 <body>
@@ -28,29 +28,33 @@
 
 <section class="pagehead"><div class="wrap"><p class="kicker">RESEARCH</p><h1>연구성과</h1><p>연구개발·자동화 과제의 결과를 영상과 시뮬레이션으로 소개합니다.</p></div></section>
 
-<div class="wrap">
+<div class="wrap wide">
 <section class="blk" style="padding-top:40px">
 <p class="label">2026 · 로봇활용 제조혁신 지원사업</p>
 <h2>SP3(셀토스) 가니쉬 로봇 자동화 조립 라인</h2>
 <div class="rs-main">
 <div class="rs-video"><iframe id="rsPlayer" src="https://www.youtube-nocookie.com/embed/ipcxv87NiCk?autoplay=1&amp;mute=0&amp;playsinline=1&amp;rel=0&amp;modestbranding=1&amp;enablejsapi=1" title="SP3(셀토스) 가니쉬 로봇 자동화 조립 라인 영상" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
 <div class="info rs-side">
-<div><small>PROGRAM</small><b>2026 로봇활용 제조혁신 지원사업</b></div>
-<div><small>도입기업</small><b>이랑산업㈜</b></div>
-<div><small>공급기업</small><b>대한기계</b></div>
-<div><small>공동 개발</small><b>스타웍스 STARWORKS</b></div>
+<h3 class="vl-h">영상 목차</h3>
+<div class="vl-year">2026</div>
+<ul class="vlist">
+<li><button type="button" class="on" aria-current="true" data-id="ipcxv87NiCk"><img src="https://i.ytimg.com/vi/ipcxv87NiCk/mqdefault.jpg" alt="" loading="lazy"><span><b>SP3(셀토스) 가니쉬<br>로봇 자동화 조립 라인</b><small>제조혁신 지원사업 · 2:59</small></span></button></li>
+</ul>
 <div class="btns">
-<a class="btn btn-blue" href="sim-sp3.html" target="_blank" rel="noopener">3D 라인 시뮬레이터 바로 가기</a>
+<a class="btn btn-blue btn-sim" href="sim-sp3.html" target="_blank" rel="noopener">3D 라인 시뮬레이터<br>바로 가기 ›<span>설비 동작을 3D로 직접 돌려 보기</span></a>
 <a class="btn btn-line" href="https://youtu.be/ipcxv87NiCk" target="_blank" rel="noopener">유튜브에서 보기</a>
-<small>시뮬레이터는 새 창에서 열립니다 · 드래그 회전 · 휠 확대</small>
+<small>시뮬레이터는 새 창에서 열립니다<br>드래그 회전 · 휠 확대 · 우클릭 이동</small>
 </div>
 </div>
 </div>
 </section>
+</div>
 
+<div class="wrap">
 <section class="blk">
 <p class="label">OVERVIEW</p><h2>과제 개요</h2>
 <p style="margin:0 0 24px;font-size:17px;color:var(--sub)">순환형 리턴베이스 기반 고속이송-정밀조립 복합시스템으로 SP3(셀토스) 가니쉬 어셈블리를 자동 조립합니다. 공정마다 완료를 확인한 뒤 다음 공정으로 넘어가는 Fool-proof 방식입니다.</p>
+<div class="models" style="margin:0 0 24px"><b>참여 기관</b><span>도입기업 · 이랑산업㈜</span><span>공급기업 · 대한기계</span><span>공동 개발 · 스타웍스 STARWORKS</span></div>
 <div class="rs-facts">
 <div><b>40 s</b><span>목표 택트 (1개당)</span></div>
 <div><b>90 EA/h</b><span>시간당 생산</span></div>
@@ -65,7 +69,7 @@
 </section>
 
 <section class="blk">
-<p class="label">CHAPTERS</p><h2>영상 목차</h2>
+<p class="label">CHAPTERS</p><h2>구간 바로 보기</h2>
 <ul class="chap">
 <li><button type="button" data-t="0"><b>0:00</b>인트로 — 로봇활용 제조혁신 지원사업</button></li>
 <li><button type="button" data-t="20"><b>0:20</b>SP3 인라인 조립 라인 전경</button></li>
@@ -79,7 +83,7 @@
 <li><button type="button" data-t="150"><b>2:30</b>스크류 체결 12점</button></li>
 <li><button type="button" data-t="164"><b>2:44</b>Fool-proof 정리 · 마무리</button></li>
 </ul>
-<p class="rs-note">목차를 누르면 위 영상이 해당 위치로 이동합니다.</p>
+<p class="rs-note">구간을 누르면 위 영상이 해당 위치로 이동합니다.</p>
 </section>
 </div>
 
@@ -101,6 +105,16 @@
 (function(){
   var f=document.getElementById('rsPlayer');
   function cmd(fn,args){f.contentWindow.postMessage(JSON.stringify({event:'command',func:fn,args:args||[]}),'*');}
+  document.querySelectorAll('.vlist button').forEach(function(b){
+    b.addEventListener('click',function(){
+      document.querySelectorAll('.vlist button').forEach(function(x){x.classList.remove('on');x.removeAttribute('aria-current');});
+      b.classList.add('on');b.setAttribute('aria-current','true');
+      var id=b.dataset.id;
+      if(f.src.indexOf('/embed/'+id)<0){f.src='https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&mute=0&playsinline=1&rel=0&modestbranding=1&enablejsapi=1';}
+      else{cmd('seekTo',[0,true]);cmd('playVideo');}
+      f.scrollIntoView({behavior:'smooth',block:'center'});
+    });
+  });
   document.querySelectorAll('.chap button').forEach(function(b){
     b.addEventListener('click',function(){
       cmd('seekTo',[+b.dataset.t,true]);cmd('playVideo');
